@@ -1,0 +1,40 @@
+#row {
+    position: relative;
+}
+
+#a {
+    position:absolute;
+    font-size: 20px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color:tomato;
+    top: 20px;
+    left:0%
+    
+ }
+
+#b {
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    font-size: 20px;
+    padding: 30px;
+    background-color:blue;
+    
+}
+#errorMsg{
+    color: greenyellow;
+    }
+#c{
+    position: absolute;
+    top: 800px;
+    left: 0px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 80px;
+    margin-left: 15px;
+    background-color:greenyellow
+
+}
+

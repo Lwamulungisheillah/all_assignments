@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms assignment</title>
+    <link rel="stylesheet"href="assignment_two.css">
+</head>
+<body>
+
+
+<div id="a">    
+<h2>number 1</h2>
+<form onsubmit="return form_validation()">
+
+        <label for="email">Email:<br></label>
+        <input type="email" id="email" name="email" required><br>
+        <pre> </pre>
+      
+        <label for="name">Name:<br></label>
+        <input type="text" id="name" name="name" required><br>
+        <pre> </pre>
+      
+        <label for="password">Password:<br></label>
+        <input type="password" id="password" name="password" required><br>
+        <pre> </pre>
+      
+        <input type="submit" value="Submit">
+
+</form>
+      
+
+<script>
+
+    function form_validation() 
+    {
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+      
+        if (email === "" || name === "" || password === "") 
+        {
+          alert("you missed a field");
+
+// Prevents form submission
+          return false; 
+        }
+// Allows form submission
+        return true; 
+    }
+
+</script>
+</div>
+
+<div id="b">
+<h2>number 2</h2>
+<form>
+
+    <label for="numericInput">contact:</label> 
+    <input type="text" id="numericInput" oninput="validate_number()">
+    <input type="submit" value="Submit">
+    <pre> </pre>
+    <span id="errorMsg" ></span>
+
+</form>
+  
+
+<script>
+
+  function validate_number() 
+  {
+//  Validate if the value is not a number
+    const input = document.getElementById("numericInput");
+
+//  display an error message
+    const errorMsg = document.getElementById("errorMsg");
+  
+    if (isNaN(input.value)) 
+    {
+      errorMsg.textContent = "kindly correct youre contact!";
+    } 
+    else 
+    {
+      errorMsg.textContent = "";
+    }
+  }
+</script>
+</div>
+
+<pre>       </pre>
+<br><br>
+
+                                     
+
+<div id="c">
+    <h2>number 3</h2> 
+  <form id="form" onsubmit="display_names()">
+    First name: <input type="text" name="firstname" value=""><br>
+    Last name: <input type="text" name="lastname" value=""><br>
+    <input type="submit" value="Submit">
+  </form>
+  
+  <p id="output"></p> <script>
+    function display_names() {
+      event.preventDefault(); // Prevent default form submission behavior
+      const firstName = document.getElementById("form").firstname.value;
+      const lastName = document.getElementById("form").lastname.value;
+      const outputElement = document.getElementById("output");
+      outputElement.textContent = `Hello ${firstName} ${lastName}, thanks for dropping by :D`;
+    }
+  </script>
+
+</div>
+
+</div> 
+    
+</body>
+</html>
